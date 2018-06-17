@@ -1,0 +1,9 @@
+# Treat as text when is possible.
+* text=auto
+
+# Ensure Unix line-endings.
+* eol=lf
+
+# Don't handle Yarn lockfile's diffs.
+# Since version 1.0 Yarn automatically handle it.
+yarn.lock -diff
