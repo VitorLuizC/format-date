@@ -3,12 +3,13 @@
     "target": "es2015",
     "module": "es2015",
     "outDir": "dist/",
-    "declaration": true
+    "declaration": true,
+    "declarationDir": "types/"
   },
   "exclude": [
     "dist/"
   ],
   "files": [
-    "nanodate.ts"
+    "src/nanodate.ts"
   ]
 }

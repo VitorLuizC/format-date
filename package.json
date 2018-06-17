@@ -1,10 +1,12 @@
 {
   "name": "nanodate",
   "version": "0.1.0",
+  "main": "dist/nanodate.cjs.js",
   "scripts": {
-    "build": "tsc && bili dist/nanodate.js --format es,cjs,umd"
+    "build": "tsc && bili dist/nanodate.js --format es,cjs,umd --js buble"
   },
   "devDependencies": {
+    "ava": "^0.25.0",
     "bili": "^3.1.2",
     "typescript": "^2.9.2"
   }

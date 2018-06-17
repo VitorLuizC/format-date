@@ -4,68 +4,63 @@
     (global.nanodate = factory());
 }(this, (function () { 'use strict';
 
-    var zero = function zero(value, length) {
+    /**
+     * Formatters are based on moment tokens. They receives a
+     * Date and returns it's formatted.
+     */
+    var formatters = {
+      'DD': function (date) { return zero(date.getDate(), 2); },
+      'D': function (date) { return date.getDate() + ''; },
+      'MM': function (date) { return zero(date.getMonth() + 1, 2); },
+      'M': function (date) { return date.getMonth() + 1 + ''; },
+      'YYYY': function (date) { return zero(date.getFullYear(), 4); },
+      'YY': function (date) { return (date.getFullYear() + '').substr(-2, 2); },
+      'hh': function (date) { return zero(date.getHours(), 2); },
+      'h': function (date) { return date.getHours() + ''; },
+      'mm': function (date) { return zero(date.getMinutes(), 2); },
+      'm': function (date) { return date.getMinutes() + ''; },
+      'ss': function (date) { return zero(date.getSeconds(), 2); },
+      's': function (date) { return date.getSeconds() + ''; }
+    };
+    /**
+     * Add '0' pads to number value.
+     */
+
+    function zero(value, length) {
       var string = value + '';
 
-      while (string.length < length) {
-        string = '0' + string;
-      }
+      while (string.length < length) { string = '0' + string; }
 
       return string;
-    }; // const [ D, YYYY ] = [
-    //   'getDate',
-    //   'getFullYear',
-    //   'getHours',
-    //   'getMinutes',
-    //   'getSeconds'
-    // ].map((property) => Function.call.bind(Date.prototype[property]))
+    }
 
+    /**
+     * Creates a matcher using formatters tokens and escape strategy.
+     */
 
-    var formatters = {
-      'DD': function DD(date) {
-        return zero(date.getDate(), 2);
-      },
-      'D': function D(date) {
-        return date.getDate() + '';
-      },
-      'MM': function MM(date) {
-        return zero(date.getMonth() + 1, 2);
-      },
-      'M': function M(date) {
-        return date.getMonth() + 1 + '';
-      },
-      'YYYY': function YYYY(date) {
-        return zero(date.getFullYear(), 4);
-      },
-      'YY': function YY(date) {
-        return date.getFullYear().substring(2) + '';
-      },
-      'HH': function HH(date) {
-        return zero(date.getHours(), 2);
-      },
-      'H': function H(date) {
-        return date.getHours() + '';
-      },
-      'mm': function mm(date) {
-        return zero(date.getMinutes(), 2);
-      },
-      'm': function m(date) {
-        return date.getMinutes() + '';
-      },
-      'SS': function SS(date) {
-        return zero(date.getSeconds(), 2);
-      },
-      'S': function S(date) {
-        return date.getSeconds() + '';
-      }
-    };
-    var regex = new RegExp(Object.keys(formatters).join('|'), 'g');
-    var nanodate = (function (date, format) {
-      var result = format.replace(regex, function (formatter) {
-        return formatters[formatter](date);
+    function createMatcher() {
+      var ESCAPE = '\\[[^\\[\\]]*\\]';
+      var matchers = Object.keys(formatters).concat(ESCAPE);
+      return new RegExp(matchers.join('|'), 'g');
+    }
+
+    var matcher = createMatcher();
+
+    /**
+     * It replaces format tokens for corresponding Date formats.
+     * @example ```js
+     * nanodate(new Date(), 'DD/MM/YYYY hh:mm:ss')
+     * ```
+     * @param date A Date instace.
+     * @param format A string with tokens based on moment.
+     */
+
+    function nanodate(date, format) {
+      return format.replace(matcher, function (token) {
+        if (formatters.hasOwnProperty(token)) { return formatters[token](date); }
+        return token.replace(/\[|\]/g, '');
       });
-      return result;
-    });
+    }
 
     return nanodate;
 
