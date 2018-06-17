@@ -17,7 +17,7 @@ yarn add tiny-date-format
 
 ## Usage
 
-`tiny-date-format` exports a function to format JavaScript `Date` object using [moment tokens][4].
+`tiny-date-format` exports a function to format JavaScript `Date` object using [moment tokens][3].
 
 ```js
 import format from 'tiny-date-format';

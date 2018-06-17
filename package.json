@@ -1,6 +1,6 @@
 {
   "name": "tiny-date-format",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A small library (around 400 B when gziped & minified) to format JavaScript `Date` object using same tokens as moment.",
   "cdn": "dist/tiny-date-format.min.js",
   "main": "dist/tiny-date-format.cjs.js",
