@@ -14,8 +14,8 @@ test('Formatters: Characters return part of a DateTime', (context) => {
   context.is(nanodate(date, 'M'), '4');
   context.is(nanodate(date, 'YYYY'), '0999')
   context.is(nanodate(date, 'YY'), '99');
-  context.is(nanodate(date, 'hh'), '05');
-  context.is(nanodate(date, 'h'), '5');
+  context.is(nanodate(date, 'HH'), '05');
+  context.is(nanodate(date, 'H'), '5');
   context.is(nanodate(date, 'mm'), '38');
   context.is(nanodate(date, 'm'), '38');
   context.is(nanodate(date, 'ss'), '02');
@@ -24,7 +24,7 @@ test('Formatters: Characters return part of a DateTime', (context) => {
 
 test('Formatters: Characters return part of a DateTime', (context) => {
   const date = new Date('0999-04-03 05:38:02');
-  const format = 'DD/MM/YYYY [às] hh[h]mm[min] e s [segundos].';
+  const format = 'DD/MM/YYYY [às] HH[h]mm[min] e s [segundos].';
 
   context.is(nanodate(date, format), '03/04/0999 às 05h38min e 2 segundos.');
 });
