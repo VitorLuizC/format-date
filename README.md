@@ -1,28 +1,28 @@
-# nanodate
+# tiny-date-format
 
 [![Build Status][2]][1]
 
-`nanodate` is a small library (around 400 B when gziped & minified) to format JavaScript `Date` object using same tokens as moment.
+`tiny-date-format` is a small library (around 400 B when gziped & minified) to format JavaScript `Date` object using same tokens as moment.
 
 ## Install
 
-`nanodate` is published under NPM registry.
+`tiny-date-format` is published under NPM registry.
 
 ```sh
-npm install --save nanodate
+npm install --save tiny-date-format
 
 # Use the command below if you're using Yarn.
-yarn add nanodate
+yarn add tiny-date-format
 ```
 
 ## Usage
 
-`nanodate` exports a function to format JavaScript `Date` object using [moment tokens][4].
+`tiny-date-format` exports a function to format JavaScript `Date` object using [moment tokens][4].
 
 ```js
-import nanodate from 'nanodate';
+import format from 'tiny-date-format';
 
-nanodate(new Date(), 'DD/MM/YYYY HH [hours] and mm [minutes].');
+format(new Date(), 'DD/MM/YYYY HH [hours] and mm [minutes].');
 // I'm escaping "hours" and "minutes" using same syntax as moment.
 ```
 
@@ -53,6 +53,6 @@ Released under MIT license. You can see it [here][0].
 <!-- Links -->
 
 [0]: ./LICENSE
-[1]: https://travis-ci.org/VitorLuizC/nanodate
-[2]: https://travis-ci.org/VitorLuizC/nanodate.svg?branch=master
+[1]: https://travis-ci.org/VitorLuizC/tiny-date-format
+[2]: https://travis-ci.org/VitorLuizC/tiny-date-format.svg?branch=master
 [3]: http://momentjs.com/docs/#/displaying/format/

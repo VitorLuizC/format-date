@@ -1,14 +1,14 @@
 {
-  "name": "nanodate",
+  "name": "tiny-date-format",
   "version": "0.1.0",
   "description": "A small library (around 400 B when gziped & minified) to format JavaScript `Date` object using same tokens as moment.",
-  "cdn": "dist/nanodate.min.js",
-  "main": "dist/nanodate.cjs.js",
-  "unpkg": "dist/nanodate.min.js",
-  "types": "types/nanodate.d.ts",
-  "module": "dist/nanodate.es.js",
-  "browser": "dist/nanodate.min.js",
-  "jsdelivr": "dist/nanodate.min.js",
+  "cdn": "dist/tiny-date-format.min.js",
+  "main": "dist/tiny-date-format.cjs.js",
+  "unpkg": "dist/tiny-date-format.min.js",
+  "types": "types/tiny-date-format.d.ts",
+  "module": "dist/tiny-date-format.es.js",
+  "browser": "dist/tiny-date-format.min.js",
+  "jsdelivr": "dist/tiny-date-format.min.js",
   "files": [
     "README.md",
     "LICENSE",
@@ -16,14 +16,14 @@
     "dist/"
   ],
   "scripts": {
-    "build": "tsc && bili src/nanodate.js --format es,cjs,umd-min --js buble",
+    "build": "tsc && bili src/tiny-date-format.js --format es,cjs,umd-min --js buble",
     "test": "ava",
     "pretest": "npm run build",
     "prepublishOnly": "npm run test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VitorLuizC/nanodate.git"
+    "url": "git+https://github.com/VitorLuizC/tiny-date-format.git"
   },
   "author": {
     "url": "https://vitorluizc.github.io/",
@@ -32,9 +32,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/VitorLuizC/nanodate/issues"
+    "url": "https://github.com/VitorLuizC/tiny-date-format/issues"
   },
-  "homepage": "https://github.com/VitorLuizC/nanodate",
+  "homepage": "https://github.com/VitorLuizC/tiny-date-format",
   "devDependencies": {
     "ava": "^0.25.0",
     "bili": "^3.1.2",

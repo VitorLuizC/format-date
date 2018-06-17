@@ -9,6 +9,6 @@
     "dist/"
   ],
   "files": [
-    "src/nanodate.ts"
+    "src/tiny-date-format.ts"
   ]
 }

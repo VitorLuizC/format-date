@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Formatters are based on moment tokens. They receives a
  * Date and returns it's format.
@@ -43,17 +45,17 @@ var matcher = createMatcher();
 /**
  * It replaces format tokens for corresponding Date formats.
  * @example ```js
- * nanodate(new Date(), 'DD/MM/YYYY hh:mm:ss')
+ * format(new Date(), 'DD/MM/YYYY hh:mm:ss')
  * ```
  * @param date A Date instace.
  * @param format A string with tokens based on moment.
  */
 
-function nanodate(date, format) {
+function format(date, format) {
   return format.replace(matcher, function (token) {
     if (formatters.hasOwnProperty(token)) { return formatters[token](date); }
     return token.replace(/\[|\]/g, '');
   });
 }
 
-export default nanodate;
+module.exports = format;
