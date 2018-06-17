@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "main": "dist/nanodate.cjs.js",
   "scripts": {
-    "build": "tsc && bili dist/nanodate.js --format es,cjs,umd --js buble"
+    "build": "tsc && bili dist/nanodate.js --format es,cjs,umd --js buble",
+    "test": "ava",
+    "prepublishOnly": "npm run build && npm run test"
   },
   "devDependencies": {
     "ava": "^0.25.0",
