@@ -4,7 +4,7 @@ declare type Formatters = {
 };
 /**
  * Formatters are based on moment tokens. They receives a
- * Date and returns it's formatted.
+ * Date and returns it's format.
  */
 declare const formatters: Formatters;
 export default formatters;

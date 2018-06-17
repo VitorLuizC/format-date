@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "es2015",
     "module": "es2015",
-    "outDir": "dist/",
     "declaration": true,
     "declarationDir": "types/"
   },

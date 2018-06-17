@@ -2,7 +2,7 @@
 
 /**
  * Formatters are based on moment tokens. They receives a
- * Date and returns it's formatted.
+ * Date and returns it's format.
  */
 var formatters = {
   'DD': function (date) { return zero(date.getDate(), 2); },

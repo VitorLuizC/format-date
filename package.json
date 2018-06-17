@@ -1,9 +1,21 @@
 {
   "name": "nanodate",
   "version": "0.1.0",
+  "cdn": "dist/nanodate.min.js",
   "main": "dist/nanodate.cjs.js",
+  "unpkg": "dist/nanodate.min.js",
+  "types": "types/nanodate.d.ts",
+  "module": "dist/nanodate.es.js",
+  "browser": "dist/nanodate.min.js",
+  "jsdelivr": "dist/nanodate.min.js",
+  "files": [
+    "README.md",
+    "LICENSE",
+    "types/",
+    "dist/"
+  ],
   "scripts": {
-    "build": "tsc && bili dist/nanodate.js --format es,cjs,umd --js buble",
+    "build": "tsc && bili src/nanodate.js --format es,cjs,umd-min --js buble",
     "test": "ava",
     "prepublishOnly": "npm run build && npm run test"
   },

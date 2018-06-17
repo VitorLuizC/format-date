@@ -4,7 +4,7 @@ type Formatters = { [ token: string ]: Formatter; };
 
 /**
  * Formatters are based on moment tokens. They receives a
- * Date and returns it's formatted.
+ * Date and returns it's format.
  */
 const formatters: Formatters = {
   'DD':   (date) => zero(date.getDate(), 2),

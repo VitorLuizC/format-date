@@ -10,3 +10,6 @@ package-lock.json
 # Log files.
 *.log
 *.log.*
+
+# JavaScript compiled sources.
+src/*.js
