@@ -2,13 +2,13 @@
   "name": "tiny-date-format",
   "version": "0.1.1",
   "description": "A small library (around 400 B when gziped & minified) to format JavaScript `Date` object using same tokens as moment.",
-  "cdn": "dist/tiny-date-format.min.js",
-  "main": "dist/tiny-date-format.cjs.js",
-  "unpkg": "dist/tiny-date-format.min.js",
+  "cdn": "dist/tiny-date-format.umd.min.js",
+  "main": "dist/tiny-date-format.js",
+  "unpkg": "dist/tiny-date-format.umd.min.js",
   "types": "types/tiny-date-format.d.ts",
-  "module": "dist/tiny-date-format.es.js",
-  "browser": "dist/tiny-date-format.min.js",
-  "jsdelivr": "dist/tiny-date-format.min.js",
+  "module": "dist/tiny-date-format.esm.js",
+  "browser": "dist/tiny-date-format.umd.min.js",
+  "jsdelivr": "dist/tiny-date-format.umd.min.js",
   "files": [
     "README.md",
     "LICENSE",
@@ -16,7 +16,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "tsc && bili src/tiny-date-format.js --format es,cjs,umd-min --js buble",
+    "build": "tsc && bili src/tiny-date-format.js --format es,cjs,umd-min --module-name tinyDateFormat --minimal",
     "test": "ava",
     "pretest": "npm run build",
     "prepublishOnly": "npm run test"
@@ -36,8 +36,8 @@
   },
   "homepage": "https://github.com/VitorLuizC/tiny-date-format",
   "devDependencies": {
-    "ava": "^0.25.0",
-    "bili": "^3.1.2",
-    "typescript": "^2.9.2"
+    "ava": "^2.4.0",
+    "bili": "^4.8.1",
+    "typescript": "^3.6.4"
   }
 }
