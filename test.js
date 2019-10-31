@@ -22,7 +22,7 @@ test('Formatters: Characters return part of a DateTime', (context) => {
   context.is(format(date, 's'), '2');
 });
 
-test('Formatters: Characters return part of a DateTime', (context) => {
+test('Formatters: Combine tokens into a custom format', (context) => {
   const date = new Date('0999-04-03 05:38:02');
   const formatter = 'DD/MM/YYYY [às] HH[h]mm[min] e s [segundos].';
 
