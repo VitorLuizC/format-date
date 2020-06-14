@@ -18,8 +18,8 @@
   "scripts": {
     "build": "tsc && bili src/tiny-date-format.js --format es,cjs,umd-min --module-name tinyDateFormat --minimal",
     "test": "ava",
-    "pretest": "npm run build",
-    "prepublishOnly": "npm run test"
+    "pretest": "pnpm run build",
+    "prepublishOnly": "pnpm run test"
   },
   "repository": {
     "type": "git",
