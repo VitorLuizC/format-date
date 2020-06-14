@@ -1,6 +1,7 @@
 devDependencies:
   ava: 2.4.0
   bili: 4.10.1
+  prettier: 2.0.5
   typescript: 3.9.5
 lockfileVersion: 5.1
 packages:
@@ -4123,6 +4124,13 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+  /prettier/2.0.5:
+    dev: true
+    engines:
+      node: '>=10.13.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-7PtVymN48hGcO4fGjybyBSIWDsLU4H4XlvOHfq91pz9kkGlonzwTfYkaIEwiRg/dAJF9YlbsduBAgtYLi+8cFg==
   /pretty-ms/5.1.0:
     dependencies:
       parse-ms: 2.1.0
@@ -5112,4 +5120,5 @@ packages:
 specifiers:
   ava: ^2.4.0
   bili: ^4.8.1
+  prettier: ^2.0.5
   typescript: ^3.6.4

@@ -9,10 +9,9 @@ import matcher from './matcher';
  * @param date A Date instace.
  * @param format A string with tokens based on moment.
  */
-function format (date: Date, format: string) {
+function format(date: Date, format: string) {
   return format.replace(matcher, (token: string) => {
-    if (formatters.hasOwnProperty(token))
-      return formatters[token](date);
+    if (formatters.hasOwnProperty(token)) return formatters[token](date);
     return token.replace(/\[|\]/g, '');
   });
 }

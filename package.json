@@ -16,8 +16,10 @@
     "dist/"
   ],
   "scripts": {
+    "lint": "prettier --check \"./src/**/*.ts\"",
+    "lint:fix": "prettier --write \"./src/**/*.ts\"",
     "build": "tsc && bili src/tiny-date-format.js --format es,cjs,umd-min --module-name tinyDateFormat --minimal",
-    "test": "ava",
+    "test": "pnpm run lint && ava",
     "pretest": "pnpm run build",
     "prepublishOnly": "pnpm run test"
   },
@@ -38,6 +40,7 @@
   "devDependencies": {
     "ava": "^2.4.0",
     "bili": "^4.8.1",
+    "prettier": "^2.0.5",
     "typescript": "^3.6.4"
   }
 }
