@@ -1,16 +1,54 @@
 # `@bitty/format-date`
 
+[![Bundle minified size](https://badgen.net/bundlephobia/min/@bitty/format-date)](https://bundlephobia.com/result?p=@bitty/format-date)
+[![Bundle minified and gzipped size](https://badgen.net/bundlephobia/minzip/@bitty/format-date)](https://bundlephobia.com/result?p=@bitty/format-date)
+
 `@bitty/format-date` is a small library (around 400 B when gziped & minified) to format JavaScript `Date` object using same tokens as moment.
 
-## Install
+- 📦 Distributions in ESM, CommonJS, UMD and UMD _minified_ formats.
 
-`@bitty/format-date` is published under NPM registry.
+- ⚡ Lightweight:
+  - Weighs less than 0.4KB (min + gzip).
+
+- 🔋 Bateries included:
+  - No dependencies.
+  - Its not based on newer browser's APIs or es2015+ features.
+
+- 🏷 Safe:
+  - JSDocs and type declarations for IDEs and editor's autocomplete/intellisense.
+  - Made with TypeScript as strict as possible.
+  - Unit tests with AVA.
+
+## Installation
+
+This library is published in the NPM registry and can be installed using any compatible package manager.
 
 ```sh
-npm install --save @bitty/format-date
+npm install @bitty/format-date --save
 
-# Use the command below if you're using Yarn.
+# For Yarn, use the command below.
 yarn add @bitty/format-date
+```
+
+### Installation from CDN
+
+This module has a UMD bundle available through JSDelivr and Unpkg CDNs.
+
+```html
+<!-- For UNPKG use the code below. -->
+<script src="https://unpkg.com/@bitty/format-date"></script>
+
+<!-- For JSDelivr use the code below. -->
+<script src="https://cdn.jsdelivr.net/npm/@bitty/format-date"></script>
+
+<script>
+  // UMD module is exposed through the "isNullish" global function.
+  console.log(formatDate);
+  //=> "[Function: formatDate]"
+
+  console.log(formatDate(new Date(), 'YYYY-MM-DD'));
+  //=> "2020-06-14"
+</script>
 ```
 
 ## Usage
@@ -46,4 +84,4 @@ Right now this lib supports the tokens below.
 
 ## License
 
-Released under MIT license. You can see it [here](./LICENSE).
+Released under [MIT License](./LICENSE).
