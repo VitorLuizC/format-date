@@ -1,7 +1,5 @@
 # tiny-date-format
 
-[![Build Status][2]][1]
-
 `tiny-date-format` is a small library (around 400 B when gziped & minified) to format JavaScript `Date` object using same tokens as moment.
 
 ## Install
@@ -17,7 +15,7 @@ yarn add tiny-date-format
 
 ## Usage
 
-`tiny-date-format` exports a function to format JavaScript `Date` object using [moment tokens][3].
+`tiny-date-format` exports a function to format JavaScript `Date` object using [moment tokens](http://momentjs.com/docs/#/displaying/format/).
 
 ```js
 import format from 'tiny-date-format';
@@ -48,11 +46,4 @@ Right now this lib supports the tokens below.
 
 ## License
 
-Released under MIT license. You can see it [here][0].
-
-<!-- Links -->
-
-[0]: ./LICENSE
-[1]: https://travis-ci.org/VitorLuizC/tiny-date-format
-[2]: https://travis-ci.org/VitorLuizC/tiny-date-format.svg?branch=master
-[3]: http://momentjs.com/docs/#/displaying/format/
+Released under MIT license. You can see it [here](./LICENSE).
