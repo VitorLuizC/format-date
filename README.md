@@ -1,26 +1,26 @@
-# tiny-date-format
+# `@bitty/format-date`
 
-`tiny-date-format` is a small library (around 400 B when gziped & minified) to format JavaScript `Date` object using same tokens as moment.
+`@bitty/format-date` is a small library (around 400 B when gziped & minified) to format JavaScript `Date` object using same tokens as moment.
 
 ## Install
 
-`tiny-date-format` is published under NPM registry.
+`@bitty/format-date` is published under NPM registry.
 
 ```sh
-npm install --save tiny-date-format
+npm install --save @bitty/format-date
 
 # Use the command below if you're using Yarn.
-yarn add tiny-date-format
+yarn add @bitty/format-date
 ```
 
 ## Usage
 
-`tiny-date-format` exports a function to format JavaScript `Date` object using [moment tokens](http://momentjs.com/docs/#/displaying/format/).
+`@bitty/format-date` exports a function to format JavaScript `Date` object using [moment tokens](http://momentjs.com/docs/#/displaying/format/).
 
 ```js
-import format from 'tiny-date-format';
+import formatDate from '@bitty/format-date';
 
-format(new Date(), 'DD/MM/YYYY HH [hours] and mm [minutes].');
+formatDate(new Date(), 'DD/MM/YYYY HH [hours] and mm [minutes].');
 // I'm escaping "hours" and "minutes" using same syntax as moment.
 ```
 

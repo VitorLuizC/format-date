@@ -1,14 +1,14 @@
 {
-  "name": "tiny-date-format",
+  "name": "@bitty/format-date",
   "version": "0.1.1",
   "description": "A small library (around 400 B when gziped & minified) to format JavaScript `Date` object using same tokens as moment.",
-  "cdn": "dist/tiny-date-format.umd.js",
-  "main": "dist/tiny-date-format.js",
-  "types": "types/tiny-date-format.d.ts",
-  "unpkg": "dist/tiny-date-format.umd.js",
-  "module": "dist/tiny-date-format.esm.js",
-  "jsdelivr": "dist/tiny-date-format.umd.js",
-  "umd:main": "dist/tiny-date-format.umd.js",
+  "cdn": "dist/format-date.umd.js",
+  "main": "dist/format-date.js",
+  "types": "types/format-date.d.ts",
+  "unpkg": "dist/format-date.umd.js",
+  "module": "dist/format-date.esm.js",
+  "jsdelivr": "dist/format-date.umd.js",
+  "umd:main": "dist/format-date.umd.js",
   "files": [
     "README.md",
     "LICENSE",
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VitorLuizC/tiny-date-format.git"
+    "url": "git+https://github.com/VitorLuizC/format-date.git"
   },
   "author": {
     "url": "https://vitorluizc.github.io/",
@@ -36,9 +36,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/VitorLuizC/tiny-date-format/issues"
+    "url": "https://github.com/VitorLuizC/format-date/issues"
   },
-  "homepage": "https://github.com/VitorLuizC/tiny-date-format",
+  "homepage": "https://github.com/VitorLuizC/format-date",
   "devDependencies": {
     "ava": "^3.9.0",
     "prettier": "^2.0.5",

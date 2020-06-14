@@ -1,5 +1,5 @@
 import test from 'ava';
-import formatDate from './tiny-date-format';
+import formatDate from './format-date';
 
 test('module API: Exports format function as default', (context) => {
   context.is(typeof formatDate, 'function');

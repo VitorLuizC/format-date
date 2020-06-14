@@ -16,24 +16,24 @@ const Option = (options) => ({
  * @type {import('rollup').RollupOptions}
  */
 const options = {
-  input: './src/tiny-date-format.js',
+  input: './src/format-date.js',
   output: [
     Option({
-      file: './dist/tiny-date-format.js',
+      file: './dist/format-date.js',
       format: 'commonjs',
     }),
     Option({
-      file: './dist/tiny-date-format.esm.js',
+      file: './dist/format-date.esm.js',
       format: 'esm',
     }),
     Option({
-      file: './dist/tiny-date-format.umd.js',
-      name: 'tinyDateFormat',
+      file: './dist/format-date.umd.js',
+      name: 'formatDate',
       format: 'umd',
     }),
     Option({
-      file: './dist/tiny-date-format.umd.min.js',
-      name: 'tinyDateFormat',
+      file: './dist/format-date.umd.min.js',
+      name: 'formatDate',
       format: 'umd',
       plugins: [terser()],
     }),
