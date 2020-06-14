@@ -2,13 +2,13 @@
   "name": "tiny-date-format",
   "version": "0.1.1",
   "description": "A small library (around 400 B when gziped & minified) to format JavaScript `Date` object using same tokens as moment.",
-  "cdn": "dist/tiny-date-format.umd.min.js",
+  "cdn": "dist/tiny-date-format.umd.js",
   "main": "dist/tiny-date-format.js",
-  "unpkg": "dist/tiny-date-format.umd.min.js",
   "types": "types/tiny-date-format.d.ts",
+  "unpkg": "dist/tiny-date-format.umd.js",
   "module": "dist/tiny-date-format.esm.js",
-  "browser": "dist/tiny-date-format.umd.min.js",
-  "jsdelivr": "dist/tiny-date-format.umd.min.js",
+  "jsdelivr": "dist/tiny-date-format.umd.js",
+  "umd:main": "dist/tiny-date-format.umd.js",
   "files": [
     "README.md",
     "LICENSE",
@@ -18,10 +18,12 @@
   "scripts": {
     "lint": "prettier --check \"./src/**/*.ts\"",
     "lint:fix": "prettier --write \"./src/**/*.ts\"",
-    "build": "tsc && bili src/tiny-date-format.js --format es,cjs,umd-min --module-name tinyDateFormat --minimal",
+    "build": "pnpm run build:transpile && pnpm run build:bundle",
+    "build:transpile": "tsc --project ./tsconfig.build.json",
+    "build:bundle": "rollup --config ./rollup.config.js",
     "test": "pnpm run lint && pnpm run test:transpile && ava",
     "test:transpile": "tsc --project ./tsconfig.test.json",
-    "prepublishOnly": "pnpm run test"
+    "prepublishOnly": "pnpm run test && pnpm run build"
   },
   "repository": {
     "type": "git",
@@ -39,8 +41,9 @@
   "homepage": "https://github.com/VitorLuizC/tiny-date-format",
   "devDependencies": {
     "ava": "^3.9.0",
-    "bili": "^4.8.1",
     "prettier": "^2.0.5",
-    "typescript": "^3.6.4"
+    "rollup": "^2.16.1",
+    "rollup-plugin-terser": "^6.1.0",
+    "typescript": "^3.9.5"
   }
 }
