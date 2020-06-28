@@ -8,7 +8,7 @@
 - 📦 Distributions in ESM, CommonJS, UMD and UMD _minified_ formats.
 
 - ⚡ Lightweight:
-  - Weighs less than 0.4KB (min + gzip).
+  - Weighs around 0.4KB (min + gzip).
 
 - 🔋 Bateries included:
   - No dependencies.
@@ -58,29 +58,29 @@ This module has a UMD bundle available through JSDelivr and Unpkg CDNs.
 ```js
 import formatDate from '@bitty/format-date';
 
-formatDate(new Date(), 'DD/MM/YYYY HH [hours] and mm [minutes].');
-// I'm escaping "hours" and "minutes" using same syntax as moment.
+formatDate(new Date(), 'DD/MM/YYYY HH [hours] [and] mm [minutes].');
+// I'm escaping "hours", "and" and "minutes" using same syntax as Moment.js.
 ```
 
-## Supported tokens
+## Tokens
 
 Right now this lib supports the tokens below.
 
-| Token | Type   | Range        |
-| ----- | ------ | ------------ |
-| DD    | Day    | 01 to 31     |
-| D     | Day    | 1 to 31      |
-| MM    | Month  | 01 to 12     |
-| M     | Month  | 1 to 12      |
-| YYYY  | Year   | 0000 to 9999 |
-| YY    | Year   | 0 to 99      |
-| HH    | Hour   | 00 to 23     |
-| H     | Hour   | 0 to 23      |
-| mm    | Minute | 00 to 59     |
-| m     | Minute | 0 to 59      |
-| ss    | Second | 00 to 59     |
-| s     | Second | 0 to 59      |
-| [*]   | Escape | &nbsp;       |
+|       &nbsp; | Token  | Output                              |
+| -----------: | :----- | :---------------------------------- |
+|         Year | `YY`   | `70`, `71`, ... `19`, `20`.         |
+|              | `YYYY` | `1970`, `1971`, ... `2019`, `2020`. |
+|        Month | `M`    | `1`, `2`, ... `11`, `12`.           |
+|              | `MM`   | `01`, `02`, ... `11`, `12`.         |
+| Day of Month | `D`    | `1`, `2`, ... `30`, `31`.           |
+|              | `DD`   | `01`, `02`, ... `30`, `31`.         |
+|         Hour | `H`    | `1`, `2`, ... , `22`,`23`.          |
+|              | `HH`   | `01`, `02`, ... , `22`,`23`.        |
+|       Minute | `m`    | `1`, `2`, ... , `58`,`59`.          |
+|              | `mm`   | `01`, `02`, ... , `58`,`59`.        |
+|       Second | `s`    | `1`, `2`, ... , `58`,`59`.          |
+|              | `ss`   | `01`, `02`, ... , `58`,`59`.        |
+|       Escape | `[*]`  | &nbsp;                              |
 
 ## License
 
