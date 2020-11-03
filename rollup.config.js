@@ -27,6 +27,10 @@ const options = {
       format: 'esm',
     }),
     Option({
+      file: './dist/format-date.mjs',
+      format: 'esm',
+    }),
+    Option({
       file: './dist/format-date.umd.js',
       name: 'formatDate',
       format: 'umd',
