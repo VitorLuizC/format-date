@@ -1,6 +1,6 @@
 {
   "name": "@bitty/format-date",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "sideEffects": false,
   "description": "A small library (around 400 B when gziped & minified) to format JavaScript `Date` object using same tokens as moment.",
   "cdn": "./dist/format-date.umd.min.js",
