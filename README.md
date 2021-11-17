@@ -80,6 +80,8 @@ Right now this lib supports the tokens below.
 |              | `mm`   | `01`, `02`, ... , `58`,`59`.        |
 |       Second | `s`    | `1`, `2`, ... , `58`,`59`.          |
 |              | `ss`   | `01`, `02`, ... , `58`,`59`.        |
+|       AM/PM  | `A`    | `AM`, `PM`.                         |
+|              | `a`    | `am`, `pm`.                         |
 |       Escape | `[*]`  | &nbsp;                              |
 
 ## License

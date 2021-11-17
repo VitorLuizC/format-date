@@ -15,6 +15,8 @@ const FORMATTERS: Record<string, (date: Date) => string> = {
   'm':    date => '' + date.getMinutes(),
   'ss':   date => addZeroPads(2, '' + date.getSeconds()),
   's':    date => '' + date.getSeconds(),
+  'a':    date => '' + (date.getHours() >= 12 ? 'pm' : 'am'),
+  'A':    date => '' + (date.getHours() >= 12 ? 'PM' : 'AM'),
 };
 
 /**
